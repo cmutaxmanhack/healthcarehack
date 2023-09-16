@@ -54,22 +54,22 @@ if test_file:
     for index, row in trait_Df.iterrows():
         if row["efo Traits"] == "antidepressant-induced side effect,response to citalopram,response to buspirone,response to antidepressant":
             st.write("Citalopram, Buspirone, Sertraline, Bupropion\n")
-            st.write("ALERT!":warning:" You are at risk for General Side Effects: including but not limited to nausea, weight gain, and sleeping trouble.")
+            st.write("ALERT! ⚠️ You are at risk for General Side Effects: including but not limited to nausea, weight gain, and sleeping trouble.")
             print()
     
         if row["efo Traits"] == "antidepressant-induced visual impairment,response to bupropion,response to citalopram,response to antidepressant":
             st.write("Citalopram and Bupropion\n")
-            st.write("ALERT! You are at risk for these side effects: Antidepressant-Induced Visual and Hearing Impairment")
+            st.write("ALERT! ⚠️ You are at risk for these side effects: Antidepressant-Induced Visual and Hearing Impairment")
             print()
     
         if row["efo Traits"] == "response to citalopram,antidepressant-induced dizziness,response to buspirone,response to antidepressant":
             st.write("Citalopram, Buspirone, Venlafaxine")
-            st.write("ALERT! You are at risk for these side effects: Antidepressant-Induced Dizziness")
+            st.write("ALERT! ⚠️ You are at risk for these side effects: Antidepressant-Induced Dizziness")
             print()
     
         if row["efo Traits"] == "antidepressant-induced sexual dysfunction,response to bupropion,response to antidepressant":
             st.write("Bupropion")
-            st.write("ALERT! You are at risk for these side effects: Antidepressant-Induced Sexual Dysfunction")
+            st.write("ALERT! ⚠️ You are at risk for these side effects: Antidepressant-Induced Sexual Dysfunction")
             print()
         
         if row["efo Traits"] == "unipolar depression,response to escitalopram,response to citalopram,mood disorder":
