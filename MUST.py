@@ -5,7 +5,7 @@ from PIL import Image
 from streamlit_extras.app_logo import add_logo
 
 
-image = Image.open("Must_Icon.png)
+image = Image.open("Must_Icon.png")
 st.image(image)
 
 st.set_page_config(
