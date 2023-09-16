@@ -33,7 +33,7 @@ def main():
         )
         
         # Display warning message
-        st.write(f"Be aware: {option} interacts with {selected_interaction}")
+        st.write(f"{option} and {selected_interaction} should not taken together as it can either increase negative side effects or decrease the effectiveness of the antidepressants")
 
 # Run the main function to execute the Streamlit app
 if __name__ == '__main__':
