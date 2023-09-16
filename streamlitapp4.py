@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.text('**Antidepressant Helper**')
+st.text('Antidepressant Helper')
 
 # Load the antidepressant data directly into the app
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
