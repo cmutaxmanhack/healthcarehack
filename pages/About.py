@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 with st.sidebar.container():
-    image1 = Image.open('MUST_Icon.jpg')
+    image1 = Image.open('MUST_Icon.png')
     st.image(image1, width= None, use_column_width=True)
 
 st.header('_***Our Mission***:_ :cherry_blossom:', divider='rainbow')
