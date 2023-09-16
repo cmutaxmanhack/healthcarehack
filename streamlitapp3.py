@@ -1,12 +1,13 @@
 import streamlit as st
 import pandas as pd
 
-# Upload the Data
-data_file = st.file_uploader("Upload your antidepressant data", type=["tsv"])
+# Load the antidepressant data directly into the app
+DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
+
+# Upload only the test data
 test_file = st.file_uploader("Upload your test data", type=["tsv"])
 
-if data_file and test_file:
-    DataDf = pd.read_csv(data_file, sep="\t")
+if test_file:
     TestDf = pd.read_csv(test_file, sep="\t")
     
     alleleArray = []
@@ -37,7 +38,17 @@ if data_file and test_file:
     trait_Df = trait_Df.set_index("Risk Allele")
     trait_Df = trait_Df.sort_values(by=["p Value"], ascending=False)
     
+    st.write("Full Data")
     st.write(trait_Df)
+    
+    # Adding a dropdown for bgTraits
+    unique_bgTraits = list(trait_Df['bg Traits'].unique())
+    selected_bgTrait = st.selectbox('Select a bgTrait to filter', unique_bgTraits)
+    
+    filtered_df = trait_Df[trait_Df['bg Traits'] == selected_bgTrait]
+    
+    st.write(f"Data filtered by selected bgTrait: {selected_bgTrait}")
+    st.write(filtered_df)
     
     for index, column in trait_Df.iterrows():
         if column["p Value Annotation"] == "(Citalopram+Buspirone, Dizziness)":
