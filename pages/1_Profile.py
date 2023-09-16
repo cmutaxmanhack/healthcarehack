@@ -1,5 +1,5 @@
 import streamlit as st
-import PLK as image
+from PIL import Image
 
 st.header('***My Profile***')
 image = Image.open('profilepicmichelle.jfif')
