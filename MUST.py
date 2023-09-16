@@ -4,10 +4,9 @@ import streamlit as st
 from PIL import Image
 from streamlit_extras.app_logo import add_logo
 
-if st.checkbox("Use url", value=True):
-    add_logo("https://media.discordapp.net/attachments/1150244664948039730/1152712094798594098/MUST_Screen-logos_transparent.png?width=1028&height=1028")
-#else:
-    #add_logo("gallery/kitty.jpeg", height=300)
+
+image = Image.open("Must_Icon.png)
+st.image(image)
 
 st.set_page_config(
     page_title="MUST: Machine Utilized Screening Tool",
