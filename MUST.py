@@ -5,7 +5,7 @@ from PIL import Image
 
 
 image = Image.open("Must_Icon.png")
-st.image(image)
+st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 st.set_page_config(
     page_title="MUST: Machine Utilized Screening Tool",
