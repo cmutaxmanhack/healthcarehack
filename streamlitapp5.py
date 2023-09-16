@@ -51,7 +51,7 @@ if test_file:
     st.header('You selected:', option)
     
     #print("You are looking for medication that works for Major Depressive Disorder.\n")
-    st.subheader("Here are potential treatment options based on the genetic information you provided:)
+    st.subheader("Here are potential treatment options based on the genetic information you provided: ")
     for index, row in trait_Df.iterrows():
         if row["efo Traits"] == "antidepressant-induced side effect,response to citalopram,response to buspirone,response to antidepressant":
             st.write("Citalopram, Buspirone, Sertraline, Bupropion\n")
