@@ -1,29 +1,30 @@
-import numpy
 import pandas as pd
 
+# Read the TSV files into DataFrames
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
 TestDf = pd.read_csv("TestData.tsv", sep="\t")
 
+# Initialize dictionaries and arrays
 traitDict = {}
-traitArray = []
-alleleDict = {}
 alleleArray = []
 
-for row in TestDf:
-    print(row)
-    alleleArray.append(row)
+# Populate alleleArray with rows from TestDf
+for index, row in TestDf.iterrows():
+    alleleArray.append(row.tolist())  # Assuming each row contains allele data in a list format
 
-print(alleleArray)
+# Iterate over rows in DataDf
+for index, row in DataDf.iterrows():
+    traitArray = []  # Reset the traitArray for each row
+    for allele_list in alleleArray:  # Iterate over the lists in alleleArray
+        for allele in allele_list:  # Iterate over alleles in the list
+            if allele in row['riskAllele']:  # Assuming row['riskAllele'] is a string or a list
+                # Populate traitArray for the current allele
+                traitArray.append(row['pValue'])
+                traitArray.append(row['pValueAnnotation'])
+                traitArray.append(row['traitName'])
+                traitArray.append(row['efoTraits'])
+                traitArray.append(row['bgTraits'])
+                traitDict[allele] = traitArray  # Assign traitArray to the allele in traitDict
 
-for index, column in DataDf.iterrows():
-    for allele in alleleArray:
-        if allele in column['riskAllele']:
-            traitArray.append(column['pValue'])
-            traitArray.append(column['pValueAnnotation'])
-            traitArray.append(column['traitName'])
-            traitArray.append(column['efoTraits'])
-            traitArray.append(column['bgTraits'])
-            traitDict[column['riskAllele']] = traitArray
-
+# Print the result
 print(traitDict)
-
