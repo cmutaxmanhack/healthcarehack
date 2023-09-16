@@ -21,14 +21,19 @@ def main():
     )
     st.write('You selected:', option)
     
-    # Show drug interactions
+    # Get and show drug interactions
     interactions = get_drug_interactions(ddi_df, option)
     if len(interactions) == 0:
         st.write(f"No known interactions for {option}.")
     else:
-        st.write(f"The following drugs interact with {option}:")
-        for interaction in interactions:
-            st.write(f"- {interaction}")
+        # New Streamlit dropdown for interacting drugs
+        selected_interaction = st.selectbox(
+            'Select an interacting drug to learn more:',
+            interactions
+        )
+        
+        # Display warning message
+        st.write(f"Be aware: {option} interacts with {selected_interaction}")
 
 # Run the main function to execute the Streamlit app
 if __name__ == '__main__':
