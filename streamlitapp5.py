@@ -6,6 +6,11 @@ import streamlit as st
 
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
 
+option = st.selectbox(
+        'What condition medication are you looking for?',
+        ('Major Depressive Disorder', 'Unipolar Disorder', 'Bipolar Disorder', 'Generalized Anxiety Disorder', 'Schizophrenia'))
+    
+st.write('You selected:', option)
 
 #TestDf = pd.read_csv("patient3.tsv", sep="\t")
 
@@ -43,12 +48,6 @@ if test_file:
     trait_Df = pd.DataFrame(trait_dict)
     trait_Df = trait_Df.set_index("Risk Allele")
     trait_Df = trait_Df.sort_values(by=["p Value"], ascending= False)
-    
-    option = st.selectbox(
-        'What condition medication are you looking for?',
-        ('Major Depressive Disorder', 'Unipolar Disorder', 'Bipolar Disorder', 'Generalized Anxiety Disorder', 'Schizophrenia'))
-    
-    st.write('You selected:', option)
     
     #print("You are looking for medication that works for Major Depressive Disorder.\n")
     st.subheader("Here are potential treatment options based on the genetic information you provided: ")
