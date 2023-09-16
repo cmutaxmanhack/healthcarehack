@@ -7,8 +7,7 @@ DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
 option = st.selectbox(
         'What medication are you looking for?',
         ('Imipramine', 'Amitriptyline', 'Doexpin', 'Desipramine', 'Isocarboxazid', 'Fluoxetine', 'Venlafaxine', 'Bupropion'))
-    
-    st.write('You selected:', option)
+st.write('You selected:', option)
 
 # Function to get drug interactions
 def get_drug_interactions(df, drug_name):
