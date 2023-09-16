@@ -6,9 +6,9 @@ st.set_page_config(
     page_icon="🌸",
 )
 
-with st.sidebar.container():
-    image = Image.open('MUST_Icon.jpg')
-    st.image(image, width= None, use_column_width=True)
+#with st.sidebar.container():
+    #image = Image.open('MUST_Icon.jpg')
+    #st.image(image, width= None, use_column_width=True)
 
 st.header('_***Our Mission***:_ :cherry_blossom:', divider='rainbow')
 
