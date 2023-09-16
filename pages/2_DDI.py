@@ -6,6 +6,14 @@ def get_drug_interactions(df, drug_name):
     interactions = df[df.iloc[:, 0] == drug_name].iloc[:, 1].tolist()
     return interactions
 
+import pandas as pd
+import streamlit as st
+
+# Function to get drug interactions
+def get_drug_interactions(df, drug_name):
+    interactions = df[df.iloc[:, 0] == drug_name].iloc[:, 1].tolist()
+    return interactions
+
 # Main Streamlit application
 def main():
     # Your existing code for antidepressants
