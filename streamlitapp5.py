@@ -52,41 +52,39 @@ if test_file:
     #print("You are looking for medication that works for Major Depressive Disorder.\n")
     for index, row in trait_Df.iterrows():
         if row["efo Traits"] == "antidepressant-induced side effect,response to citalopram,response to buspirone,response to antidepressant":
-            st.write("Here are potential treatment options based on the genetic information you provided: Citalopram, Buspirone, Sertraline, Bupropion\n"
-              "ALERT! You are at risk for General Side Effects: including but not limited to nausea, weight gain, and sleeping trouble.")
+            st.write("Here are potential treatment options based on the genetic information you provided: Citalopram, Buspirone, Sertraline, Bupropion\n")
+            st.write("ALERT! You are at risk for General Side Effects: including but not limited to nausea, weight gain, and sleeping trouble.")
             print()
     
         if row["efo Traits"] == "antidepressant-induced visual impairment,response to bupropion,response to citalopram,response to antidepressant":
-            print("Here are potential treatment options based on the genetic information you provided: Citalopram and Bupropion\n"
-                  "ALERT! You are at risk for these side effects: Antidepressant-Induced Visual and Hearing Impairment")
+            st.write("Here are potential treatment options based on the genetic information you provided: Citalopram and Bupropion\n")
+            st.write("ALERT! You are at risk for these side effects: Antidepressant-Induced Visual and Hearing Impairment")
             print()
     
         if row["efo Traits"] == "response to citalopram,antidepressant-induced dizziness,response to buspirone,response to antidepressant":
-            print("Here are potential treatment options based on the genetic information you provided: Citalopram, Buspirone, Venlafaxine\n"
-                  "ALERT! You are at risk for these side effects: Antidepressant-Induced Dizziness")
+            st.write("Here are potential treatment options based on the genetic information you provided: Citalopram, Buspirone, Venlafaxine")
+            st.write("ALERT! You are at risk for these side effects: Antidepressant-Induced Dizziness")
             print()
     
         if row["efo Traits"] == "antidepressant-induced sexual dysfunction,response to bupropion,response to antidepressant":
-            print("Here are potential treatment options based on the genetic information you provided: Bupropion\n"
-                  "ALERT! You are at risk for these side effects: Antidepressant-Induced Sexual Dysfunction")
+            st.write("Here are potential treatment options based on the genetic information you provided: Bupropion")
+            st.write("ALERT! You are at risk for these side effects: Antidepressant-Induced Sexual Dysfunction")
             print()
         
         if row["efo Traits"] == "unipolar depression,response to escitalopram,response to citalopram,mood disorder":
-            print("Unfortunately, based on the genetic information you provided Citalopram and Escitalopram have not proven effective for treating your condition. \n")
+            st.write("Unfortunately, based on the genetic information you provided Citalopram and Escitalopram have not proven effective for treating your condition.")
             print()
     
         if row["efo Traits"] == "unipolar depression,response to bupropion,mood disorder":
-            print("Unfortunately, based on the genetic information you provided Bupropion has not proven effective for treating your condition. ")
+            st.write("Unfortunately, based on the genetic information you provided Bupropion has not proven effective for treating your condition. ")
             print()
     
         if row["efo Traits"] == "response to antidepressant":
-            print("Unfortunately, patients with similar genetic information have exibhited antidepressant treatment resistance. \nPlease consult your doctor"
-                  " for alternative treatment options. \n")
+            st.write("Unfortunately, patients with similar genetic information have exibhited antidepressant treatment resistance.)
+            st.write("Please consult your doctor for alternative treatment options.")
             print()
     
         if row["efo Traits"] == "unipolar depression,response to selective serotonin reuptake inhibitor,mood disorder":
-            print("Unfortunately, based on the genetic information you provided Selective Serotonin Reuptake inhibitors (SSRIs) have not proven effective"
-                      " for treating your condition.\n SSRIs include but are not limited to medication such as Serteraline, "
-                      "Citalopram, Escitalopram, Fluoxetine, etc.\n")
+            st.write("Unfortunately, based on the genetic information you provided Selective Serotonin Reuptake inhibitors (SSRIs) have not proven effective for treating your condition.\n SSRIs include but are not limited to medication such as Serteraline, Citalopram, Escitalopram, Fluoxetine, etc.")
         else:
-            print(" ")
+            st.write(" ")
