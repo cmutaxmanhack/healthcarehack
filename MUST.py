@@ -4,7 +4,7 @@ import streamlit as st
 from PIL import Image
 
 
-image = Image.open("Must_Icon.png")
+image = Image.open("MUST_Icon.png")
 st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 st.set_page_config(
