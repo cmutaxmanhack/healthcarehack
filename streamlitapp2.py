@@ -1,12 +1,13 @@
 import streamlit as st
 import pandas as pd
 
-# Upload the Data
-data_file = st.file_uploader("Upload your antidepressant data", type=["tsv"])
+# Load the antidepressant data directly into the app
+DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
+
+# Upload only the test data
 test_file = st.file_uploader("Upload your test data", type=["tsv"])
 
-if data_file and test_file:
-    DataDf = pd.read_csv(data_file, sep="\t")
+if test_file:
     TestDf = pd.read_csv(test_file, sep="\t")
     
     alleleArray = []
