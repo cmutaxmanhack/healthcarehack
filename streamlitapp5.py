@@ -6,7 +6,9 @@ import streamlit as st
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
 
 
-TestDf = pd.read_csv("patient3.tsv", sep="\t")
+#TestDf = pd.read_csv("patient3.tsv", sep="\t")
+
+test_file = st.file_uploader("Upload your genome", typ=["tsv])
 
 alleleArray = []
 
@@ -37,10 +39,11 @@ trait_Df = pd.DataFrame(trait_dict)
 trait_Df = trait_Df.set_index("Risk Allele")
 trait_Df = trait_Df.sort_values(by=["p Value"], ascending= False)
 
-choice = st.selectbox(
-'What condition medication are you looking for?',
-    ('Major Depressive Disorde', 'Unipolar Disorder', 'Schizophrenia', 'Generalized Anxiety Disorder', 'Bipolar Disorder')
-)
+option = st.selectbox(
+    'What condition medication are you looking for?',
+    ('Major Depressive Disorder', 'Unipolar Disorder', 'Bipolar Disorder'))
+
+st.write('You selected:', option)
 
 print("You are looking for medication that works for Major Depressive Disorder.\n")
 for index, row in trait_Df.iterrows():
