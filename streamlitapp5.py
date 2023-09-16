@@ -11,6 +11,8 @@ textColor="#040404"
 
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
 
+st.footer("This platform is only meant for patient education and understanding. The advice presented here does not substitute the advice of a professional healthcare provider. Always consult with your medical provider to determine the best healthcare plan for you.") 
+
 option = st.selectbox(
         'What condition medication are you looking for?',
         ('Major Depressive Disorder', 'Unipolar Disorder', 'Bipolar Disorder', 'Generalized Anxiety Disorder', 'Schizophrenia'))
