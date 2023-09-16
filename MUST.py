@@ -3,12 +3,13 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 
-image = Image.open('MUST_icon.png')
 
-st.image(image)
 
 
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
+
+image = Image.open('MUST_icon.png')
+st.image(image)
 
 st.caption("This platform is only meant for patient education and understanding. The advice presented here does not substitute the advice of a professional healthcare provider. Always consult with your medical provider with any questions you may have regarding a medical condition or treatment.") 
 
