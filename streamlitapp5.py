@@ -8,7 +8,7 @@ DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
 
 #TestDf = pd.read_csv("patient3.tsv", sep="\t")
 
-test_file = st.file_uploader("Upload your genome", type=["tsv])
+test_file = st.file_uploader("Upload your genome", type=["tsv"])
 
 alleleArray = []
 
