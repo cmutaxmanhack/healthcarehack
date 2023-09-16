@@ -48,7 +48,7 @@ if test_file:
         'What condition medication are you looking for?',
         ('Major Depressive Disorder', 'Unipolar Disorder', 'Bipolar Disorder', 'Generalized Anxiety Disorder', 'Schizophrenia'))
     
-    st.header('You selected:', option)
+    st.subheader('You selected:', option)
     
     #print("You are looking for medication that works for Major Depressive Disorder.\n")
     st.subheader("Here are potential treatment options based on the genetic information you provided: ")
