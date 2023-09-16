@@ -80,7 +80,7 @@ if test_file:
             print()
     
         if row["efo Traits"] == "response to antidepressant":
-            st.write("Unfortunately, patients with similar genetic information have exibhited antidepressant treatment resistance.)
+            st.write("Unfortunately, patients with similar genetic information have exibhited antidepressant treatment resistance.")
             st.write("Please consult your doctor for alternative treatment options.")
             print()
     
