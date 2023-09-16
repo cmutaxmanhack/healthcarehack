@@ -1,9 +1,13 @@
+import streamlit as st
 import numpy
 import pandas as pd
-import streamlit as st
 
 
+# Load the antidepressant data directly into the app
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
+
+# Upload only the test data
+test_file = st.file_uploader("Upload your test data", type=["tsv"])
 
 
 TestDf = pd.read_csv("patient3.tsv", sep="\t")
