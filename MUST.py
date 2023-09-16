@@ -1,12 +1,11 @@
 import numpy
 import pandas as pd
 import streamlit as st
+from PIL import Image
 
+image = Image.open('MUST_icon.png')
 
-
-backgroundColor="#f7f6d6"
-secondaryBackgroundColor="#e6dc76"
-textColor="#040404"
+st.image(image)
 
 
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
