@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 from PIL import Image
 
@@ -6,9 +7,9 @@ st.set_page_config(
     page_icon="🌸",
 )
 
-#with st.sidebar.container():
- #   image1 = Image.open('MUST_Icon.jpg')
-  #  st.image(image1, width= None, use_column_width=True)
+with st.sidebar.container():
+    image1 = Image.open('MUST_Icon.jpg')
+    st.image(image1, width= None, use_column_width=True)
 
 st.header('_***Our Mission***:_ :cherry_blossom:', divider='rainbow')
 
