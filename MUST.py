@@ -4,14 +4,13 @@ import streamlit as st
 from PIL import Image
 
 
-image = Image.open("MUST_Icon.png")
-st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-
 st.set_page_config(
     page_title="MUST: Machine Utilized Screening Tool",
     page_icon="🧬",
 )
 
+image = Image.open("MUST_Icon.png")
+st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
