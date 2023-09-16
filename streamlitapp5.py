@@ -12,7 +12,7 @@ test_file = st.file_uploader("Upload your genome", type=["tsv"])
 
 alleleArray = []
 
-for index, row in TestDf.iterrows():
+for index, row in test_file.iterrows():
     alleleArray.append(row.tolist())
 
 trait_dict = {
