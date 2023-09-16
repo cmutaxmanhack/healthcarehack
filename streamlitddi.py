@@ -1,8 +1,6 @@
 import pandas as pd
 import streamlit as st
 
-DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
-
 # Function to get drug interactions
 def get_drug_interactions(df, drug_name):
     interactions = df[df.iloc[:, 0] == drug_name].iloc[:, 1].tolist()
@@ -10,10 +8,13 @@ def get_drug_interactions(df, drug_name):
 
 # Main Streamlit application
 def main():
+    # Your existing code for antidepressants
     DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
     # Reading drug interactions data
     ddi_df = pd.read_csv("ddi.csv")
 
+    # Streamlit dropdown for drug interactions
+    st.subheader("Check Drug Interactions")
     unique_drugs = ddi_df.iloc[:, 0].unique()
     selected_drug = st.selectbox("Select a drug to check its interactions:", unique_drugs)
     
