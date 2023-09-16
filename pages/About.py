@@ -7,8 +7,8 @@ st.set_page_config(
 )
 
 with st.sidebar.container():
-    image = Image.open('MUST_Icon.jpg')
-    st.image(image, width= None, use_column_width=True)
+    image1 = Image.open('MUST_Icon.jpg')
+    st.image(image1, width= None, use_column_width=True)
 
 st.header('_***Our Mission***:_ :cherry_blossom:', divider='rainbow')
 
@@ -16,6 +16,6 @@ st.markdown ("Our mission is to empower individuals and healthcare professionals
 
 
 
-#image = Image.open('wordmatrix.png')
+image2 = Image.open('wordmatrix.png')
 
-#st.image(image)
+st.image(image2)
