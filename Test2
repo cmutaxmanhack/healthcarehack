@@ -1,30 +1,38 @@
-import numpy
 import pandas as pd
 
+# Read data from files
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
 TestDf = pd.read_csv("TestData.tsv", sep="\t")
 
+# Initialize dictionaries and lists
 traitDict = {}
-traitArray = []
-alleleDict = {}
-alleleArray = []
 
-for index, row in TestDf.iterrows():
-    alleleArray.append(row.tolist())
+# Create a list from the TestDf DataFrame
+alleleArray = TestDf.values.tolist()
 
-print(alleleArray)
-
-for index, column in DataDf.iterrows():
+# Iterate through the DataDf DataFrame rows
+for index, row in DataDf.iterrows():
+    # Extract necessary columns from the current row
+    risk_allele = row['riskAllele']
+    p_value = row['pValue']
+    p_value_annotation = row['pValueAnnotation']
+    trait_name = row['traitName']
+    efo_traits = row['efoTraits']
+    bg_traits = row['bgTraits']
+    
+    # Iterate through the allele lists
     for allele_list in alleleArray:
+        # Iterate through the alleles in each list
         for allele in allele_list:
-            if allele in column['riskAllele']:
-                traitArray.append(column['pValue'])
-                traitArray.append(column['pValueAnnotation'])
-                traitArray.append(column['traitName'])
-                traitArray.append(column['efoTraits'])
-                traitArray.append(column['bgTraits'])
-                traitDict[column['riskAllele']] = traitArray
+            if allele in risk_allele:
+                # Create a new list for the current risk allele
+                traitArray = [p_value, p_value_annotation, trait_name, efo_traits, bg_traits]
                 
-traitDf = pd.DataFrame.from_dict(traitDict.items())
+                # Update the dictionary for the current risk allele
+                traitDict[risk_allele] = traitArray
 
+# Convert dictionary to DataFrame
+traitDf = pd.DataFrame(list(traitDict.items()), columns=['RiskAllele', 'Traits'])
+
+# Print the DataFrame
 print(traitDf)
