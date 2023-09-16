@@ -69,10 +69,10 @@ if test_file:
             print()
 
          if row["efo Traits"] == "antidepressant-induced sexual dysfunction,response to bupropion,response to antidepressant":
-            print(
+             print(
                   "Here are potential treatment options based on the genetic information you provided: Bupropion\n"
                   "ALERT! You are at risk for these side effects: Antidepressant-Induced Sexual Dysfunction")
-            print()
+             print()
     
         if row["efo Traits"] == "unipolar depression,response to escitalopram,response to citalopram,mood disorder":
             print(
