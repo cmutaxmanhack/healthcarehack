@@ -12,7 +12,7 @@ test_file = st.file_uploader("Upload your genome", type=["tsv"])
 
 alleleArray = []
 
-if test_file:
+
     TestDf = pd.read_csv(test_file, sep="\t")
 
     for index, row in TestDf.iterrows():
