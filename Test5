@@ -1,0 +1,25 @@
+import pandas as pd
+
+# Load the TSV file into a DataFrame
+file_path = 'response_to_antidepressant.tsv'  # Replace with your actual file path
+df = pd.read_csv(file_path, sep='\t')
+
+# Create an empty dictionary to store the data
+risk_allele_dict = {}
+
+# Iterate through the DataFrame to populate the dictionary
+for index, row in df.iterrows():
+    risk_allele = row['riskAllele']
+    p_value = row['pValue']
+    trait_name = row['traitName']
+    
+    # Create a dictionary for pValue and traitName
+    value_dict = {'pValue': p_value, 'traitName': trait_name}
+    
+    # Check if the riskAllele already exists as a key in the dictionary
+    if risk_allele in risk_allele_dict:
+        risk_allele_dict[risk_allele].append(value_dict)
+    else:
+        risk_allele_dict[risk_allele] = [value_dict]
+
+# Now, risk_allele_dict contains the information you need
