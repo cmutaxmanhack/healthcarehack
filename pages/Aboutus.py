@@ -1,6 +1,6 @@
 import streamlit as st
 st.header('_***Our Mission***:_ :cherry_blossom:', divider='rainbow')
- ")
+
 st.markdown ("Our mission is to empower individuals and healthcare professionals with personalized 
 healthcare solutions by providing an easy-to-use and free-access platform for antidepressant 
 medication screening. We are dedicated to revolutionizing the way people approach their health 
