@@ -4,7 +4,10 @@ import streamlit as st
 from PIL import Image
 
 
-
+st.set_page_config(
+    page_title="MUST: Machine Utilized Screening Tool",
+    page_icon="🧬",
+)
 
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
 
