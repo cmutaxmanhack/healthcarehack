@@ -1,6 +1,19 @@
 import pandas as pd
 import streamlit as st
+from PIL import Image
 
+st.set_page_config(
+    page_title="DDI",
+    page_icon="💊",
+)
+
+
+st.title("Drug-Drug Interaction")
+
+with st.sidebar.container():
+    image = Image.open('MUST_Icon.png')
+    st.image(image, width= None, use_column_width=True)
+    
 # Function to get drug interactions
 def get_drug_interactions(df, drug_name):
     interactions = df[df.iloc[:, 0] == drug_name].iloc[:, 1].tolist()
