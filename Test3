@@ -1,0 +1,38 @@
+import pandas as pd
+
+# Read data from files
+DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
+TestDf = pd.read_csv("TestData.tsv", sep="\t")
+
+# Initialize dictionaries and lists
+traitDict = {}
+
+# Create a list from the TestDf DataFrame
+alleleArray = TestDf.values.tolist()
+
+# Iterate through the DataDf DataFrame rows
+for index, row in DataDf.iterrows():
+    # Extract necessary columns from the current row
+    risk_allele = row['riskAllele']
+    p_value = row['pValue']
+    p_value_annotation = row['pValueAnnotation']
+    trait_name = row['traitName']
+    efo_traits = row['efoTraits']
+    bg_traits = row['bgTraits']
+    
+    # Iterate through the allele lists
+    for allele_list in alleleArray:
+        # Iterate through the alleles in each list
+        for allele in allele_list:
+            if str(allele) in str(risk_allele):  # Convert both to strings
+                # Create a new dictionary for the current risk allele
+                traitDict[risk_allele] = {
+                    'pValue': p_value,
+                    'pValueAnnotation': p_value_annotation,
+                    'traitName': trait_name,
+                    'efoTraits': efo_traits,
+                    'bgTraits': bg_traits
+                }
+
+# Print the dictionary
+print(traitDict)
