@@ -4,9 +4,8 @@ import streamlit as st
 
 
 
-backgroundColor="#f7f6d6"
-secondaryBackgroundColor="#e6dc76"
-textColor="#040404"
+icon = Image.open('MUST_icon.jpg')
+st.image(icon)
 
 
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
