@@ -49,14 +49,14 @@ if test_file:
     
     st.write('You selected:', option)
     
-    print("You are looking for medication that works for Major Depressive Disorder.\n")
+    #print("You are looking for medication that works for Major Depressive Disorder.\n")
     for index, row in trait_Df.iterrows():
         if row["efo Traits"] == "antidepressant-induced side effect,response to citalopram,response to buspirone,response to antidepressant":
             print("Here are potential treatment options based on the genetic information you provided: Citalopram, Buspirone, Sertraline, Bupropion\n"
               "ALERT! You are at risk for General Side Effects: including but not limited to nausea, weight gain, and sleeping trouble.")
             print()
     
-        if row["efo Traits"] == "antidepressant-induced visual impairment,response to bupropion,response to citalopram,response to antidepressant":
+       ''' if row["efo Traits"] == "antidepressant-induced visual impairment,response to bupropion,response to citalopram,response to antidepressant":
             print("Here are potential treatment options based on the genetic information you provided: Citalopram and Bupropion\n"
                   "ALERT! You are at risk for these side effects: Antidepressant-Induced Visual and Hearing Impairment")
             print()
@@ -89,4 +89,4 @@ if test_file:
                       " for treating your condition.\n SSRIs include but are not limited to medication such as Serteraline, "
                       "Citalopram, Escitalopram, Fluoxetine, etc.\n")
         else:
-            print(" ")
+            print(" ") '''
