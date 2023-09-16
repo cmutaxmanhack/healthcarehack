@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 
 
-[theme]
+
 backgroundColor="#f7f6d6"
 secondaryBackgroundColor="#e6dc76"
 textColor="#040404"
