@@ -4,6 +4,12 @@ import streamlit as st
 
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
 
+option = st.selectbox(
+        'What medication are you looking for?',
+        ('Imipramine', 'Amitriptyline', 'Doexpin', 'Desipramine', 'Isocarboxazid', 'Fluoxetine', 'Venlafaxine', 'Bupropion'))
+    
+    st.write('You selected:', option)
+
 # Function to get drug interactions
 def get_drug_interactions(df, drug_name):
     interactions = df[df.iloc[:, 0] == drug_name].iloc[:, 1].tolist()
@@ -17,11 +23,7 @@ def main():
     ddi_df = pd.read_csv("ddi.csv")
 
     # Streamlit dropdown for drug interactions
-    option = st.selectbox(
-        'What medication are you looking for?',
-        ('Imipramine', 'Amitriptyline', 'Doexpin', 'Desipramine', 'Isocarboxazid', 'Fluoxetine', 'Venlafaxine', 'Bupropion'))
     
-    st.write('You selected:', option)
     
     #st.subheader("Check Drug Interactions")
     #unique_drugs = ddi_df.iloc[:, 0].unique()
