@@ -54,7 +54,7 @@ if test_file:
     for index, row in trait_Df.iterrows():
         if row["efo Traits"] == "antidepressant-induced side effect,response to citalopram,response to buspirone,response to antidepressant":
             st.write("Citalopram, Buspirone, Sertraline, Bupropion\n")
-            st.write("ALERT! You are at risk for General Side Effects: including but not limited to nausea, weight gain, and sleeping trouble.")
+            st.write("ALERT!":warning:" You are at risk for General Side Effects: including but not limited to nausea, weight gain, and sleeping trouble.")
             print()
     
         if row["efo Traits"] == "antidepressant-induced visual impairment,response to bupropion,response to citalopram,response to antidepressant":
