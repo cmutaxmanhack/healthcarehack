@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 image = Image.open("MUST_Icon.png")
-st.image(image, caption=None, width= 20px, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+st.image(image, caption=None, width= 20, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 
 DataDf = pd.read_csv("response_to_antidepressant.tsv", sep="\t")
