@@ -13,6 +13,8 @@ st.title("Drug-Drug Interaction")
 with st.sidebar.container():
     image = Image.open('MUST_Icon.png')
     st.image(image, width= None, use_column_width=True)
+
+st.caption("This platform is only meant for patient education and understanding. The advice presented here does not substitute the advice of a professional healthcare provider. Always consult with your medical provider with any questions you may have regarding a medical condition or treatment.")
     
 # Function to get drug interactions
 def get_drug_interactions(df, drug_name):
