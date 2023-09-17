@@ -30,5 +30,5 @@ option = st.selectbox(
     st.write('You selected:', option)
 
 for index, row in DrugDf.iterrows():
-  if option == row:
-      st.write(row)
+  if option == row['Drug']:
+      st.write(row['Drug'])
