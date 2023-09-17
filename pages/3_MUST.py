@@ -5,11 +5,11 @@ from PIL import Image
 
 
 st.set_page_config(
-    page_title="MUST: Machine-Utilized Screening Tool",
+    page_title="MUST: Machine Utilized Screening Tool",
     page_icon="🧬",
 )
 
-st.title("MUST: Machine Utilized Screening Tool")
+st.title("MUST: Machine-Utilized Screening Tool")
 
 multi = '''We are a free-access screening website that helps to find the most suitable antidepressant medication for your chosen condition. After the website collects your genome information, it compares yours with hundreds of published genome data detecting for mutations that are associated with optimal drug effectiveness and side effects with corresponding antidepressant drugs. The website will prioritize the drug options for you also with relative side effects that you should be looking out for.'''
 st.markdown(multi)
