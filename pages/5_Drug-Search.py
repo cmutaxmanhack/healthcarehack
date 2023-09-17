@@ -31,4 +31,10 @@ st.write('You selected:', option)
 
 for index, row in DrugDf.iterrows():
   if option == row['Drug']:
-      st.write(row['Drug'])
+      st.header(row['Drug'])
+      st.subheader("Uses")
+      st.write(row['Uses'])
+      st.subheader("The Drug's Mechanisms")
+      st.write(row['Mechanism'])
+      st.subheader("Side Effects")
+      st.write(row['Side Effects'])
