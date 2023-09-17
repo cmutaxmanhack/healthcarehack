@@ -20,7 +20,7 @@ st.header('***My Profile***')
 if not st.session_state['profile_saved']:
     # Profile Image
     image = Image.open('ProfilePic.jpeg')
-    st.image(image, caption='Profile Picture', width=500, use_column_width=False)
+    st.image(image, caption='Profile Picture', width=100, use_column_width=False)
 
     # Personal Information
     st.subheader('Personal Information')
