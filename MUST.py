@@ -62,7 +62,8 @@ if test_file:
     trait_Df = pd.DataFrame(trait_dict)
     trait_Df = trait_Df.set_index("Risk Allele")
     trait_Df = trait_Df.sort_values(by=["p Value"], ascending= False)
-    
+
+    st.divider()
     #print("You are looking for medication that works for Major Depressive Disorder.\n")
     st.subheader("Here are potential treatment options based on the genetic information you provided: ")
     for index, row in trait_Df.iterrows():
@@ -103,3 +104,4 @@ if test_file:
             st.write("Unfortunately, based on the genetic information you provided Selective Serotonin Reuptake inhibitors (SSRIs) have not proven effective for treating your condition. SSRIs include but are not limited to medication such as Serteraline, Citalopram, Escitalopram, Fluoxetine, etc.")
         else:
             st.write(" ")
+st.divider()
