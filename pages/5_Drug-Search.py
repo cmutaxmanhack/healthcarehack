@@ -31,4 +31,4 @@ option = st.selectbox(
 
 for index, row in DrugDf.iterrows():
   if option == row:
-    st.write(row)
+      st.write(row)
