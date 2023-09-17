@@ -5,7 +5,7 @@ from PIL import Image
 
 
 st.set_page_config(
-    page_title="MUST: Machine Utilized Screening Tool",
+    page_title="MUST: Machine-Utilized Screening Tool",
     page_icon="🧬",
 )
 
