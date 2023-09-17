@@ -10,6 +10,8 @@ st.set_page_config(
 
 st.title("Drug-Drug Interaction")
 
+st.text('A change in a drug’s effect on the body when the drug is taken together with a second drug. A drug-drug interaction can delay, decrease, or enhance the absorption of either drug. This can decrease or increase the action of either or both drugs or cause adverse effects.')
+
 with st.sidebar.container():
     image = Image.open('MUST_Icon.png')
     st.image(image, width= None, use_column_width=True)
