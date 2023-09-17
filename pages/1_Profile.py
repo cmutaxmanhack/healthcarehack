@@ -33,7 +33,7 @@ if not st.session_state['profile_saved']:
     # Known Conditions
     conditions = st.text_area("Known Conditions:", "None")
 
-    consent = st.checkbox("I consent for sharing my information")
+    consent = st.checkbox("Do you consent for your health and physcial data to be collected anonymously for research purposes")
     
     # Save Profile Button
     if st.button("Save Profile"):
