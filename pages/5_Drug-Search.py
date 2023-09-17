@@ -15,14 +15,14 @@ with st.sidebar.container():
     image = Image.open('MUST_Icon.png')
     st.image(image, width= None, use_column_width=True)
 
-DrugDf = pd.read_csv("Antidepressant.tsv", sep="\t")
+DrugDf = pd.read_csv("Antidepressant2.tsv", sep="\t")
 
 option = st.selectbox(
         'What medication are you looking for?',
         ('Imipramine', 'Amitriptyline', 'Doxepin', 'Desipramine', 'Isocarboxazid', 'Citalopram', 'Venlafaxine', 'Bupropion', 'Buspirone', 'Sertraline', 'Escitalopram', 'Mirtazapine')
     )
 st.write('You selected:', option)
-
+st.divider()
 for index, row in DrugDf.iterrows():
   if option == row['Drug']:
       st.header(row['Drug'])
@@ -32,3 +32,4 @@ for index, row in DrugDf.iterrows():
       st.write(row['Mechanism'])
       st.subheader("Side Effects")
       st.write(row['Side Effects'])
+st.divider()
