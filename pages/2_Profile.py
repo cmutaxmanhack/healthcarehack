@@ -1,6 +1,11 @@
 import streamlit as st
 from PIL import Image
 
+st.set_page_config(
+    page_title="About Us",
+    page_icon="👩",
+)
+
 # Initialize session state
 if 'profile_saved' not in st.session_state:
     st.session_state['profile_saved'] = False
@@ -11,7 +16,7 @@ st.header('***My Profile***')
 if not st.session_state['profile_saved']:
     # Profile Image
     image = Image.open('ProfilePic.jpeg')
-    st.image(image, caption='Profile Picture', width=50, use_column_width=True)
+    st.image(image, caption='Profile Picture', width=10, use_column_width=False)
 
     # Personal Information
     st.subheader('Personal Information')
