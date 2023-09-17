@@ -6,6 +6,10 @@ st.set_page_config(
     page_icon="👩",
 )
 
+with st.sidebar.container():
+    image = Image.open('MUST_Icon.png')
+    st.image(image, width= None, use_column_width=True)
+    
 # Initialize session state
 if 'profile_saved' not in st.session_state:
     st.session_state['profile_saved'] = False
@@ -16,7 +20,7 @@ st.header('***My Profile***')
 if not st.session_state['profile_saved']:
     # Profile Image
     image = Image.open('ProfilePic.jpeg')
-    st.image(image, caption='Profile Picture', width=10, use_column_width=False)
+    st.image(image, caption='Profile Picture', width=100, use_column_width=False)
 
     # Personal Information
     st.subheader('Personal Information')
