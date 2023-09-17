@@ -9,6 +9,7 @@ st.set_page_config(
     page_icon="🧬",
 )
 
+st.title("MUST: Machine Utilized Screening Tool")
 #image = Image.open("MUST_Icon.png")
 #st.image(image, caption=None, width= 400, use_column_width= 50, clamp=False, channels="RGB", output_format="auto")
 with st.sidebar.container():
