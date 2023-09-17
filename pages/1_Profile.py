@@ -33,6 +33,8 @@ if not st.session_state['profile_saved']:
     # Known Conditions
     conditions = st.text_area("Known Conditions:", "None")
 
+    consent = st.checkbox("I consent for sharing my information")
+    
     # Save Profile Button
     if st.button("Save Profile"):
         st.session_state['profile_saved'] = True
