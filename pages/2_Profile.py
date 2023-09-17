@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 st.set_page_config(
-    page_title="About Us",
+    page_title="Profile",
     page_icon="👩",
 )
 
@@ -20,7 +20,7 @@ st.header('***My Profile***')
 if not st.session_state['profile_saved']:
     # Profile Image
     image = Image.open('ProfilePic.jpeg')
-    st.image(image, caption='Profile Picture', width=100, use_column_width=False)
+    st.image(image, caption='Profile Picture', width=500, use_column_width=False)
 
     # Personal Information
     st.subheader('Personal Information')
