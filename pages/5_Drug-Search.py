@@ -27,7 +27,7 @@ option = st.selectbox(
         'What medication are you looking for?',
         ('Imipramine', 'Amitriptyline', 'Doexpin', 'Desipramine', 'Isocarboxazid', 'Citalopram', 'Venlafaxine', 'Bupropion', 'Buspirone', 'Sertraline', 'Escitalopram', 'Mirtazapine')
     )
-    st.write('You selected:', option)
+st.write('You selected:', option)
 
 for index, row in DrugDf.iterrows():
   if option == row['Drug']:
